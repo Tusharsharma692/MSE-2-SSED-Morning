@@ -57,7 +57,7 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/taskflow-frontend:${{ github.sha }}
 
       - name: Create deployment environment file
- 	run: |
+        run: |
           cat > .env <<'EOF'
           POSTGRES_DB=taskflow
           POSTGRES_USER=taskflow_user
